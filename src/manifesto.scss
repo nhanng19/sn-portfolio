@@ -1,0 +1,25 @@
+.manifesto{
+    height: 100vh;
+    background-color: black;
+
+    .section {
+        height: calc(100vh - 104px);
+
+        .title-position {
+            padding: 196px 0 0 173px;
+        }
+
+        .line-break {
+            display: block;
+            height: 1px;
+            margin: 24px 0 0 173px;
+            border-radius: 10px;
+            background-color: #333;
+        }
+
+        .quotation-position-1 {
+            margin: 24px 0 0 173px;
+        }
+    }
+}
+

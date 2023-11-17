@@ -1,0 +1,16 @@
+.garden{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+
+        // slow down change between pages
+        scroll-behavior: smooth;
+
+        > *{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+

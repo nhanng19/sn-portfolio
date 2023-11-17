@@ -1,0 +1,21 @@
+@import "../../global.scss";
+
+.right {
+    .image {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+
+        width: 50%;
+        // height: 100%;
+
+        z-index: 8;
+
+        background-color: transparent;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hide-mobile
+    {display:none;}
+}

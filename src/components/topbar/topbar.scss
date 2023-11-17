@@ -1,0 +1,91 @@
+@import "../../global.scss";
+
+.topbar {
+    width: 100%;
+    height: 104px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+
+    .wrapper{
+        padding: 32px 72px 0px 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left{
+            .name{
+                width: 72px;
+                height: 32px;
+                border-radius: 5px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #a53c46;
+
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 900;
+                color: #fff;
+            }
+        }
+
+        .right{
+            display: flex;
+
+            .name {
+                font-family: Ubuntu Mono;
+                font-size: 12px;
+                line-height: 1.4;
+                letter-spacing: 1.2px;
+            }
+
+        }
+    }
+}
+
+
+
+.garden {
+    .topbar {
+        .right {
+            .name {
+                color: #000;
+                text-decoration: none;
+            }
+
+            .garden-name {
+                text-decoration-line: underline;
+            }
+
+            > *{
+                padding-left: 24px;
+            }
+        }
+    }
+}
+
+.manifesto {
+    .topbar {
+        .right {
+            .name {
+                padding: 6px 8px;
+                border-radius: 4px;
+
+                background-color: #333;
+                text-decoration: none;
+
+                color: #fff;
+            }
+
+            .manifesto-name {
+                background-color: #b3b3b3;
+            }
+
+            > *{
+                padding-left: 16px;
+            }
+        }
+    }
+}
