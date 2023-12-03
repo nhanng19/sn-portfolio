@@ -83,3 +83,9 @@ $mainColor: #a53c46;
     font-size: 14px;
     color: #fff;
 }
+
+@media screen and (max-width: 1024px) {
+    .Title {
+        font-size: 24px;
+    }
+}

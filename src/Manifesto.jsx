@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import Topbar from "./components/topbar/Topbar";
 import "./manifesto.scss";
 
@@ -7,13 +8,13 @@ export default function Manifesto() {
         <Topbar />
 
         <div className="section">
-            <span className="Title title-position">
-                THE MANIFESTO<span className="Dashes">//</span>
+            <span class="Title title-position">
+                THE MANIFESTO<span class="Dashes">//</span>
             </span>
 
             <div className="line-break"></div>
 
-            <span className="Quotation quotation-position-1">
+            <span class="Quotation quotation-position-1">
                 Think big, go far...<br />
                 Be a pioneer, be ready to forge new paths and take smart risks.<br />
                 <br />

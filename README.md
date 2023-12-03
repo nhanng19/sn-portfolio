@@ -6,6 +6,8 @@
 
 To get dependencies.
 
+### `npm install node-sass`
+
 ### `npm start`
 
 Runs the app in the development mode.\

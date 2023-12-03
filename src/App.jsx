@@ -2,6 +2,7 @@ import Garden from "./Garden";
 import Manifesto from "./Manifesto";
 import "./app.scss";
 
+import React, { Component }  from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {

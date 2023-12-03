@@ -5,16 +5,16 @@ import "./portfolio.scss";
 export default function Portfolio() {
   return (
     <div className='portfolio' id="portfolio">
-      <span className="Title title-position">
+      <span class="Title title-position">
         TRUSTED<br />
-        BY MANY<span className="Dashes">//</span>
+        BY MANY<span class="Dashes">//</span>
       </span>
 
-      <div className="Red-highlighting red-highlight-position">
+      <div class="Red-highlighting red-highlight-position">
         I believe good design is where art, community, and technology fuse to create magic
       </div>
 
-      <span className="Quotation quotation-position-1">
+      <span class="Quotation quotation-position-1">
         Jump down the rabbit hole with me and lets get started on a new project together.<br />
         Contact me through any of the following.<br />
         <br />
@@ -168,9 +168,9 @@ export default function Portfolio() {
           </span>
         </div>
 
-      <span className="Quotation quotation-position-2">
+      <span class="Quotation quotation-position-2">
         Curious about my work? Fall into the
-        <a className="Black-button black-button-sizing" href="#contact">
+        <a class="Black-button black-button-sizing" href="#contact">
           Rabit Hole ↓
         </a>
       </span>
