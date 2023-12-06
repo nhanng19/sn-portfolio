@@ -1,5 +1,9 @@
 $mainColor: #a53c46;
 
+* {
+    box-sizing: border-box;
+}
+
 .garden {
     .Title {
         color: #000;
@@ -87,5 +91,12 @@ $mainColor: #a53c46;
 @media screen and (max-width: 1024px) {
     .Title {
         font-size: 24px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .mobile-hidden {
+        display: none !important;
     }
 }

@@ -1,230 +1,201 @@
 @import "../../global.scss";
 
-.portfolio{
-    scrollbar-width: none; // for firefox
-    &::-webkit-scrollbar{
+.portfolio {
+  scrollbar-width: none; // for firefox
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .title-position {
+    margin: 316px 0 0 97px;
+  }
+
+  .red-highlight-position {
+    margin: 48px 0 0 97px;
+  }
+
+  .quotation-position-1 {
+    margin: 4px 0 0 97px;
+  }
+
+  .portfolio-section {
+    margin: 54px 0 0 87px;
+
+    position: relative;
+     display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+    width: 40%;
+
+    .box {
+      display: inline-block;
+      border: solid 1px #ece7e5;
+      position: relative;
+        min-height: 250px;
+
+
+      .box-wrapper {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 22;
+        transition: 0.2s height linear;
+        .image-box {
+            width: 160px;
+            height: 128px;
+            //TODO: change for each obj
+            // .image {
+            //     margin: 36px 48px 0px 48px;
+            // }
+
+            .blockpoly-image {
+            margin: 43.8px 0 0 36.8px;
+            }
+
+            .double-jump-image {
+            margin: 36px 0 0 48px;
+            }
+
+            .mongodb-image {
+            margin: 32px 0 0 50px;
+            }
+
+            .mcafee-image {
+            margin: 36px 0 0 53px;
+            }
+
+            .goinvo-image {
+            margin: 36px 0 0 40px;
+            }
+
+            .aeromates-image {
+            margin: 24px 0 0 40px;
+            }
+
+            .haus-of-golf-image {
+            margin: 24px 0 0 40px;
+            }
+
+            .vrillar-image {
+            margin: 8px 0 0 27px;
+            }
+
+            .image-hover {
+            display: none;
+            z-index: 3;
+            position: absolute;
+            }
+        }
+          &:hover {
+        transform: scale(1.1);
+        transition: .2s linear all;
+        z-index: 3;
+        border: 0px;
+        background-color: $mainColor;
+        
+        .image-box {
+          width: 180px;
+          margin-left: 10px;
+
+          .image {
+            display: none;
+          }
+
+          .image-hover {
+            display: inline;
+          }
+        }
+
+        .portfolio-position {
+          left: 16px;
+          bottom: 74px;
+          color: #c2c2c2;
+        }
+
+        .portfolio-title {
+          left: 16px;
+          bottom: 98px;
+          color: white;
+        }
+
+        .portfolio-description {
+          display: block;
+        }
+      }    
+    }
+
+      .portfolio-title {
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.03;
+        color: #000;
+
+        width: 100%;
+        position: absolute;
+        left: 16px;
+        bottom: 40px;
+      }
+
+      .portfolio-position {
+        height: 24px;
+        font-family: Ubuntu Mono;
+        font-size: 11px;
+        line-height: 2.18;
+        letter-spacing: 0.07px;
+        color: #000;
+
+        width: 100%;
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+      }
+
+      .portfolio-description {
+        font-family: Ubuntu Mono;
+        font-size: 11px;
+        line-height: 1.64;
+        letter-spacing: 0.07px;
+        color: #fff;
+
+        width: 100%;
+        position: absolute;
+        left: 16px;
+        bottom: 20px;
+
         display: none;
+
+        .italics {
+          font-style: italic;
+        }
+      }
+
+
     }
 
-    .title-position {
-        margin: 316px 0 0 97px;
+    .quotation-position-2 {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+
+      .black-button-sizing {
+        margin-left: 8px;
+        width: 110px;
+        height: 30px;
+      }
     }
+  }
+}
 
-    .red-highlight-position {
-        margin: 48px 0 0 97px;
-    }
-
-    .quotation-position-1 {
-        margin: 4px 0 0 97px;
-    }
-
-    .portfolio-section {
-        margin: 54px 0 0 87px;
-
-        width: 660px;
-        height: 420px;
-
-        position: relative;
-
-        .left-pad {
-            width: 10px;
-            height: 360px;
-            top: 0;
-            left: 0;
-            position: absolute;
-        }
-
-        .box {
-            display: inline-block;
-            width: 158px;
-            height: 178px;
-            border: solid 1px #ece7e5;
-            position: absolute;
-
-            .image-box {
-                width: 160px;
-                height: 128px;
-                //TODO: change for each obj
-                // .image {
-                //     margin: 36px 48px 0px 48px;
-                // }
-
-                .blockpoly-image {
-                    margin: 43.8px 0 0 36.8px;
-                }
-
-                .double-jump-image {
-                    margin: 36px 0 0 48px;
-                }
-
-                .mongodb-image {
-                    margin: 32px 0 0 50px;
-                }
-
-                .mcafee-image {
-                    margin: 36px 0 0 53px;
-                }
-
-                .goinvo-image {
-                    margin: 36px 0 0 40px;
-                }
-
-                .aeromates-image {
-                    margin: 24px 0 0 40px;
-                }
-
-                .haus-of-golf-image {
-                    margin: 24px 0 0 40px;
-                }
-
-                .vrillar-image {
-                    margin: 8px 0 0 27px;
-                }
-
-                .image-hover {
-                    display: none;
-                    z-index: 3;
-                    position: absolute;
-                }
-            }
-
-            .portfolio-title {
-                font-family: Poppins;
-                font-size: 12px;
-                font-weight: 800;
-                line-height: 1.03;
-                color: #000;
-
-                width: 100%;
-                position: absolute;
-                left: 16px;
-                bottom: 40px;
-            }
-
-            .portfolio-position {
-                height: 24px;
-                font-family: Ubuntu Mono;
-                font-size: 11px;
-                line-height: 2.18;
-                letter-spacing: 0.07px;
-                color: #000;
-
-                width: 100%;
-                position: absolute;
-                left: 16px;
-                bottom: 16px;
-            }
-
-            .portfolio-description {
-                font-family: Ubuntu Mono;
-                font-size: 11px;
-                line-height: 1.64;
-                letter-spacing: 0.07px;
-                color: #fff;
-
-                width: 100%;
-                position: absolute;
-                left: 16px;
-                bottom: 20px;
-
-                display: none;
-
-                .italics {
-                    font-style: italic;
-                }
-            }
-
-            &:hover {
-                z-index: 2;
-                transform: translateX(-10px);
-
-                width: 180px;
-                height: 240px;
-
-                border: 0px;
-                background-color: $mainColor;
-
-                .image-box {
-                    width: 180px;
-                    margin-left: 10px;
-
-                    .image {
-                        display: none;
-                    }
-
-                    .image-hover {
-                        display: inline;
-                    }
-                }
-
-                .portfolio-position {
-                    left: 16px;
-                    bottom: 74px;
-                    color: #c2c2c2;
-                }
-
-                .portfolio-title {
-                    left: 16px;
-                    bottom: 98px;
-                    color: white;
-                }
-
-                .portfolio-description {
-                    display: block;
-                }
-            }
-        }
-
-        .mongodb-position {
-            left: 10px;
-            top: 0px;
-        }
-
-        .double-jump-position {
-            left: 170px;
-            top: 0px;
-        }
-
-        .blockpoly-position {
-            left: 330px;
-            top: 0px;
-        }
-
-        .mcafee-position {
-            left: 490px;
-            top: 0px;
-        }
-
-        .go-invo-position {
-            left: 10px;
-            top: 180px;
-        }
-
-        .aeromates-position {
-            left: 170px;
-            top: 180px;
-        }
-
-        .haus-of-golf-position {
-            left: 330px;
-            top: 180px;
-        }
-
-        .vrillar-position {
-            left: 490px;
-            top: 180px;
-        }
-
-        .quotation-position-2 {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-
-            .black-button-sizing {
-                margin-left: 8px;
-                width: 110px;
-                height: 30px;
-            }
-        }
-    }
+@media screen and (max-width: 760px) {
+  .title-position {
+    margin: 0 !important;
+  }
+  .box {
+    position: relative !important;
+    top: unset !important;
+    left: unset !important;
+  }
 }

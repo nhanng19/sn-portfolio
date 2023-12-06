@@ -1,15 +1,15 @@
 const data = [
     {
         title: "Garden",
-        route: "/garden"
+        route: "intro"
     },
     {
         title: "Work",
-        route: "/garden#work"
+        route: "portfolio"
     },
     {
         title: "Rabbit Hole",
-        route: "/garden#rabbit-hole"
+        route: "contact"
     }
 ]
 
