@@ -15,13 +15,13 @@ export default function Contact() {
       </span>
 
 
-      <div className="line-break"></div>
+      <hr />
 
       <div className="personal-info-box">
-        <ul className="personal-info-list">
+
           <a className="link" href="mailto:sandynguyen1276@gmail.com">
             <li className="tile">
-              <img src="images/contact-bird.png" alt="Image" className="image"/>
+              <img src="images/contact-bird.png" alt="Image" className="bird-image"/>
               <span className="title">EMAIL</span>
               <span className="message">Send me and email</span>
             </li>
@@ -29,17 +29,16 @@ export default function Contact() {
 
           <a className="link" href="https://www.linkedin.com/in/-sandy-nguyen/">
             <li className="tile">
-              <img src="images/linkedin-bird.png" alt="Image" className="image"/>
+              <img src="images/linkedin-bird.png" alt="Image" className="bird-image"/>
               <span className="title">LINKEDIN</span>
               <span className="message">Connect with me</span>
             </li>
           </a>
-        </ul>
 
-        <ul className="personal-info-list">
+ 
           <a className="link" href="https://t.me/sandyngu">
             <li className="tile">
-              <img src="images/telegram-bird.png" alt="Image" className="image"/>
+              <img src="images/telegram-bird.png" alt="Image" className="bird-image"/>
               <span className="title">TELEGRAM</span>
               <span className="message">Send me a message</span>
             </li>
@@ -47,12 +46,12 @@ export default function Contact() {
 
           <a className="link" href="https://calendly.com/sandy_nguyen/30?month=2022-05">
             <li className="tile">
-              <img src="images/calendy-bird.png" alt="Image" className="image"/>
+              <img src="images/calendy-bird.png" alt="Image" className="bird-image"/>
               <span className="title">CALENDY</span>
               <span className="message">Schedule a hangout</span>
             </li>
           </a>
-        </ul>
+
       </div>
     </div>
   )

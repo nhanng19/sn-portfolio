@@ -12,7 +12,6 @@ const Ul = styled.ul`
     padding: 5px 10px;
     cursor: none;
     color: black;
-    
   }
   li a {
     transition: 0.2s all linear;
@@ -95,18 +94,12 @@ const Ul = styled.ul`
     align-items: start;
     gap: 1rem;
     li {
-      color: #000 !important;
+      color: #000;
       font-family: Poppins;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
-      line-height: 103.5%; /* 24.84px */
-      color: #000 !important;
-      font-family: Poppins;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 103.5%; /* 24.84px */
+      line-height: 103.5%;
       width: 100%;
       text-align: left;
       border-bottom: 1px solid #ece7e5;
@@ -137,12 +130,8 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open, setOpen, setSelectedSection }) => {
   const navigation = [
-    {
-      title: "GARDEN",
-      href: "/garden",
-    },
     {
       title: "MANIFESTO",
       href: "/manifesto",
@@ -150,17 +139,17 @@ const RightNav = ({ open }) => {
     {
       title: "RESUME",
       href: "https://drive.google.com/file/d/1CeBOftEQb7FyD2K8waF91TloiMtjClnT/view",
-      isHard: true
+      isHard: true,
     },
     {
       title: "LINKEDIN",
       href: "https://www.linkedin.com/in/-sandy-nguyen/",
-      isHard: true
+      isHard: true,
     },
     {
       title: "CONTACT",
       href: "mailto:sandynguyen1276@gmail.com",
-      isHard: true
+      isHard: true,
     },
   ];
   return (
@@ -175,16 +164,27 @@ const RightNav = ({ open }) => {
           <Link to="/garden">
             <span className="logo">SANDY</span>
           </Link>
+          <li key={"garden"}>
+            <Link
+              onClick={() => {
+                setOpen(false);
+                setSelectedSection("intro");
+              }}
+              to={"/garden"}
+            >
+              <span className="navigation">GARDEN</span>
+            </Link>
+          </li>
           {navigation.map((item) =>
             !item.isHard ? (
               <li key={item.title}>
-                <Link to={item.href}>
+                <Link onClick={() => setOpen(false)} to={item.href}>
                   <span className="navigation">{item.title}</span>
                 </Link>
               </li>
             ) : (
               <li key={item.title}>
-                <a href={item.href}>
+                <a onClick={() => setOpen(false)} href={item.href}>
                   <span className="navigation">{item.title}</span>
                 </a>
               </li>

@@ -4,7 +4,8 @@ import "./portfolio.scss";
 import data from './data';
 export default function Portfolio() {
   const [experience, setExperience] = useState("MD");
-  const experiences = Object.values(data)
+  const experiences = Object.values(data);
+  const [active, setActive] = useState(false)
   const handleExperience = (val) => {
     setExperience(val)
   }
@@ -38,7 +39,7 @@ export default function Portfolio() {
         {experiences.map((company) => (
           <div
             key={company.key}
-            onClick={() => handleExperience(company.key)}
+            onClick={() => { handleExperience(company.key); setActive(true) }}
             className="box mongodb-position"
           >
             <div className="box-wrapper">
@@ -71,17 +72,19 @@ export default function Portfolio() {
           Rabit Hole ↓
         </a>
       </span>
-      <div className="experience-description">
-        <span class="experience-company">
-          {data[experience].company}
-          <span className="experience-dash">
-            // {data[experience].position}
+      {active && (
+        <div className="experience-description">
+          <span class="experience-company">
+            {data[experience].company}
+            <span className="experience-dash">
+              // {data[experience].position}
+            </span>
           </span>
-        </span>
-        <hr />
-        <p className="experience-duty">{data[experience].description}</p>
-        <hr />
-      </div>
+          <hr />
+          <p className="experience-duty">{data[experience].description}</p>
+          <hr />
+        </div>
+      )}
     </div>
   );
 }

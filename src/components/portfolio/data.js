@@ -27,7 +27,7 @@ const data = {
   BP: {
     key: "BP",
     company: "BLOCKPOLY",
-    position: "FOUNDING DESIGNERr",
+    position: "FOUNDING DESIGNER",
     description: "Designed an MVP metaverse loan marketplace for land NFTs.  ",
     image: "blockpoly-icon.PNG",
   },

@@ -14,10 +14,10 @@ const Nav = styled.nav`
   align-items: center;
 `;
 
-const Navbar = () => {
+const Navbar = ({ setSelectedSection}) => {
   return (
     <Nav>
-      <Burger />
+      <Burger {...{setSelectedSection}}/>
     </Nav>
   );
 };

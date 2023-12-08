@@ -1,6 +1,8 @@
 @import "../../global.scss";
 
 .intro {
+
+
     scrollbar-width: none; // for firefox
     display: flex;
     padding: 196px 100px;
@@ -39,6 +41,11 @@
 
 @media screen and (max-width: 1024px) {
     .intro {
-        padding: 8rem 1rem !important;
+        padding: 112px 1rem !important;
+        gap: 24px !important;
     }
+
+.Quotation {
+    line-height: 16.2px !important
+}
 }

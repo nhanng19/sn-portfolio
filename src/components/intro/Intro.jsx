@@ -1,11 +1,11 @@
 import React, { Component }  from 'react';
 
 import "./intro.scss";
-
+import RightImage from "../right/Right";
 export default function Intro() {
   return (
     <>
-      
+      <RightImage />
     <div className='intro' id="intro">
       <span class="Title title-position">
         WELCOME TO<br />

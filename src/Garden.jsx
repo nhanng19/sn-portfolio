@@ -32,7 +32,7 @@ export default function Garden() {
 
   return (
     <div className="garden">
-      <Navbar />
+      <Navbar {...{setSelectedSection}} />
       <div className={`sections ${isMobile ? "mobile" : ""}`}>
         {isMobile && (
           <>

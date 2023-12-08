@@ -1,6 +1,7 @@
 @import "../../global.scss";
 
 .contact {
+    padding-bottom: 3rem;
     .title-position {
         margin: 350px 0 0 97px;
     }
@@ -19,10 +20,9 @@
 
     .personal-info-box {
         margin: 14px 0 106px 79px;
-
-        .personal-info-list {
-            display: flex;
-            padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 630px;
 
             .link {
                 text-decoration: none;
@@ -37,7 +37,7 @@
                     background-color: #e5e5e5;
                     position: relative;
 
-                    .image {
+                    .bird-image {
                         position: absolute;
                         bottom: 0;
                         left: 0;
@@ -84,7 +84,26 @@
             }
 
 
-        }
+   
 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 118px 16px;
+    }
+    .contact .quotation-position-1 {
+        margin: 16px 0 !important;
+    }
+    .personal-info-box {
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px;
+    }
+        .contact .personal-info-box .link .tile {
+        width: 100% !important;
+        margin: 0 !important;
     }
 }

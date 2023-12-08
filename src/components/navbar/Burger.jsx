@@ -17,7 +17,7 @@ const StyledBurger = styled.div`
   }
   div {
     width: 2rem;
-    height: 0.2rem;
+    height: 3px;
     background-color: ${({ open }) => (open ? "#000000" : "#000000")};
     border-radius: 10px;
     transform-origin: 1px;
@@ -35,7 +35,7 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = ({ setSelectedSection }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -45,7 +45,11 @@ const Burger = () => {
         <div style={{ backgroundColor: "black" }} />
         <div style={{ backgroundColor: "black" }} />
       </StyledBurger>
-      <RightNav open={open} />
+      <RightNav
+        setSelectedSection={setSelectedSection}
+        setOpen={setOpen}
+        open={open}
+      />
     </>
   );
 };

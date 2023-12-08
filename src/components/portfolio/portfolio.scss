@@ -1,5 +1,9 @@
 @import "../../global.scss";
 
+.hide-desktop {
+  display: none;
+}
+
 .portfolio {
   scrollbar-width: none; // for firefox
   &::-webkit-scrollbar {
@@ -163,6 +167,9 @@
     padding: 112px 16px;
     
   }
+  .hide-desktop {
+    display: block;
+  }
   .hide-mobile {
     display: none !important;
   }
@@ -216,9 +223,10 @@ letter-spacing: 0.072px;
   }
 
   hr {
-    height: 0.5px;
+    height: 1px;
     color: #ece7e5;
     border-top-width: 1px;
     margin: 1rem 0;
+    transform: scaleY(0.3);
   }
 }
