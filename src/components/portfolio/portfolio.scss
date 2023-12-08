@@ -32,56 +32,23 @@
       display: inline-block;
       border: solid 1px #ece7e5;
       position: relative;
-        min-height: 250px;
+       min-height: 250px;
 
 
       .box-wrapper {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         position: absolute;
         height: 100%;
         width: 100%;
         z-index: 22;
         transition: 0.2s height linear;
+        justify-content: center;
+        align-items: center;
         .image-box {
-            width: 160px;
-            height: 128px;
-            //TODO: change for each obj
-            // .image {
-            //     margin: 36px 48px 0px 48px;
-            // }
-
-            .blockpoly-image {
-            margin: 43.8px 0 0 36.8px;
-            }
-
-            .double-jump-image {
-            margin: 36px 0 0 48px;
-            }
-
-            .mongodb-image {
-            margin: 32px 0 0 50px;
-            }
-
-            .mcafee-image {
-            margin: 36px 0 0 53px;
-            }
-
-            .goinvo-image {
-            margin: 36px 0 0 40px;
-            }
-
-            .aeromates-image {
-            margin: 24px 0 0 40px;
-            }
-
-            .haus-of-golf-image {
-            margin: 24px 0 0 40px;
-            }
-
-            .vrillar-image {
-            margin: 8px 0 0 27px;
-            }
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
             .image-hover {
             display: none;
             z-index: 3;
@@ -96,8 +63,7 @@
         background-color: $mainColor;
         
         .image-box {
-          width: 180px;
-          margin-left: 10px;
+
 
           .image {
             display: none;
@@ -191,11 +157,68 @@
 
 @media screen and (max-width: 760px) {
   .title-position {
+    margin-bottom: 12px !important;
+  }
+  .portfolio {
+    padding: 112px 16px;
+    
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  .title-position {
     margin: 0 !important;
   }
   .box {
     position: relative !important;
     top: unset !important;
     left: unset !important;
+        min-height: 84px !important;
+  }
+  .portfolio-section {
+    margin: 0 !important;
+    width: 100% !important;
+    margin: 24px 0!important
+  }
+  .image {
+    width: 70%;
+  }
+  .experience-company {
+    display: flex;
+    align-items: center;
+    color: #000;
+gap: 4px;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 800;
+line-height: 103.5%;
+  }
+  .experience-dash {
+    color: #C2C2C2;
+
+font-family: Ubuntu Mono;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 200% */
+letter-spacing: 0.072px;
+  }
+  .experience-duty {
+    color: #262626;
+
+font-family: Ubuntu Mono;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 150% */
+letter-spacing: 0.072px;
+  }
+
+  hr {
+    height: 0.5px;
+    color: #ece7e5;
+    border-top-width: 1px;
+    margin: 1rem 0;
   }
 }
