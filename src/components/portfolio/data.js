@@ -24,7 +24,7 @@ const data = {
       "Spearheaded the design of the responsive MVP website + lite pages.",
     image: "double-jump-icon.PNG",
     render: () => (
-      <span className="portfolio-description">
+      <span className="portfolio-description hide-mobile">
         Spearheaded the design of
         <br />
         the responsive MVP
@@ -40,7 +40,7 @@ const data = {
     description: "Designed an MVP metaverse loan marketplace for land NFTs.  ",
     image: "blockpoly-icon.PNG",
     render: () => (
-      <span className="portfolio-description">
+      <span className="portfolio-description hide-mobile">
         Designed an MVP metaverse
         <br />
         loan marketplace for land
@@ -56,7 +56,7 @@ const data = {
     description: "Created a guided post-purchase download experience. ",
     image: "mcafee-icon.PNG",
     render: () => (
-      <span className="portfolio-description">
+      <span className="portfolio-description hide-mobile">
         Created a guided post-
         <br />
         purchase download
@@ -72,7 +72,7 @@ const data = {
     description: "Built a patient timeline feature + ASD task app.",
     image: "goinvo-icon.PNG",
     render: () => (
-      <span className="portfolio-description">
+      <span className="portfolio-description hide-mobile">
         Built a patient timeline
         <br />
         feature + ASD task app.
@@ -86,7 +86,7 @@ const data = {
     description: "Designed the iOS and web MVP of the aviation marketplace.",
     image: "aeromates-icon.PNG",
     render: () => (
-      <span className="portfolio-description">
+      <span className="portfolio-description hide-mobile">
         Designed the iOS and web
         <br />
         MVP of the aviation
@@ -103,7 +103,7 @@ const data = {
       "Conceptualized brand identity through style guides and logo design.",
     image: "haus-of-golf-icon.PNG",
     render: () => (
-      <span className="portfolio-description">
+      <span className="portfolio-description hide-mobile">
         Conceptualized brand
         <br />
         identity through style
@@ -119,7 +119,7 @@ const data = {
     description: "Designed the user interface for an NFT marketplace.",
     image: "vrillar-icon.PNG",
     render: () => (
-      <span className="portfolio-description">
+      <span className="portfolio-description hide-mobile">
         Designed the user
         <br />
         interface for an NFT
