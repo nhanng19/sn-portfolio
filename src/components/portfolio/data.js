@@ -5,7 +5,7 @@ const data = {
     position: "INTERACTION DESIGNER",
     description:
       "DS lead of the navigation redesign. Building and maintaining the LG DS.",
-    image: "mongodb-icon.png",
+    image: "mongodb-icon.PNG",
     render: () => (
       <span className="portfolio-description hide-mobile">
         DS lead of the navigation
