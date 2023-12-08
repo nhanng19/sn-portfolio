@@ -23,7 +23,7 @@ export default function Contact() {
             <li className="tile">
               <img src="images/contact-bird.png" alt="Image" className="bird-image"/>
               <span className="title">EMAIL</span>
-              <span className="message">Send me and email</span>
+              <span className="message">Send me an email</span>
             </li>
           </a>
 
