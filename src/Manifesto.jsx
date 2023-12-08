@@ -5,8 +5,6 @@ import "./manifesto.scss";
 export default function Manifesto() {
     return (
       <div className="manifesto">
-        <Topbar />
-
         <div className="section">
             <span class="Title title-position">
                 THE MANIFESTO<span class="Dashes">//</span>

@@ -23,3 +23,25 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .manifesto {
+        padding: 118px 1rem;
+        .section {
+            height: calc(100vh - 106px) !important;
+            .title-position {
+                padding: 0 !important;
+            }
+            .quotation-position-1 {
+            margin: 0
+            
+        }
+                .line-break {
+            display: block;
+            height: 1px;
+            margin: 1rem 0;
+            border-radius: 10px;
+            background-color: #333;
+        }
+        }
+    }
+}

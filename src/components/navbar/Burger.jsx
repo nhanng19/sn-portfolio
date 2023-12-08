@@ -36,16 +36,19 @@ const StyledBurger = styled.div`
 `;
 
 const Burger = ({ setSelectedSection }) => {
+    const [dark, setDark] = useState(false);
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div style={{ backgroundColor: "black" }} />
-        <div style={{ backgroundColor: "black" }} />
-        <div style={{ backgroundColor: "black" }} />
+        <div style={{ backgroundColor: dark ? "white" : "black" }} />
+        <div style={{  backgroundColor: dark ? "white" : "black" }} />
+        <div style={{  backgroundColor: dark ? "white" : "black" }} />
       </StyledBurger>
       <RightNav
+        dark={dark}
+        setDark={ setDark}
         setSelectedSection={setSelectedSection}
         setOpen={setOpen}
         open={open}

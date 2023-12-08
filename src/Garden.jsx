@@ -8,31 +8,16 @@ import Bottombar from "./components/bottombar/Bottombar";
 import Navbar from "./components/navbar/NavBar";
 import "./garden.scss";
 
-export default function Garden() {
-  const [selectedSection, setSelectedSection] = useState("intro");
-  const [isMobile, setIsMobile] = useState(false);
+export default function Garden({
+  selectedSection,
+  isMobile,
+  setSelectedSection,
+  handleSectionChange,
+}) {
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); 
-    };
-
-    handleResize(); // Initial check
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleSectionChange = (section) => {
-    setSelectedSection(section);
-  };
 
   return (
     <div className="garden">
-      <Navbar {...{setSelectedSection}} />
       <div className={`sections ${isMobile ? "mobile" : ""}`}>
         {isMobile && (
           <>
@@ -49,7 +34,7 @@ export default function Garden() {
           </>
         )}
       </div>
-      {isMobile && <Bottombar {...{handleSectionChange, selectedSection}} />}
+      {isMobile && <Bottombar {...{ handleSectionChange, selectedSection }} />}
     </div>
   );
 }
