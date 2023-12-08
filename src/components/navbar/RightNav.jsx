@@ -113,7 +113,13 @@ const Ul = styled.ul`
     li:last-child {
       border: none;
     }
+    li a {
+      background: white !important;
+    }
 
+    li a:hover {
+      text-decoration: none
+    }
     p {
       justify-self: flex-end;
       display: block;
@@ -134,7 +140,7 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
+const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark, isMobile }) => {
   const navigate = useNavigate();
 
   const navigation = [
@@ -192,7 +198,7 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
                 navigate("/garden");
               }}
               href={"#"}
-              className={` ${dark ? "name" : ""}`}
+              className={` ${dark && !isMobile ? "name" : ""}`}
             >
               <span className="navigation">GARDEN</span>
             </a>
@@ -205,7 +211,7 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
                 setDark(true);
               }}
               href={"#"}
-              className={` ${dark ? "name manifesto-name" : ""}`}
+              className={` ${dark && !isMobile ? "name manifesto-name" : ""}`}
             >
               <span className="navigation">MANIFESTO</span>
             </a>
@@ -214,7 +220,7 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
             !item.isHard ? (
               <li key={item.title}>
                 <a
-                  className={` ${dark ? "name" : ""}`}
+                  className={` ${dark && !isMobile ? "name" : ""}`}
                   onClick={() => {
                     setOpen(false);
                   }}
@@ -226,7 +232,7 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
             ) : (
               <li key={item.title}>
                 <a
-                  className={` ${dark ? "name" : ""}`}
+                  className={` ${dark && !isMobile ? "name" : ""}`}
                   onClick={() => setOpen(false)}
                   href={item.href}
                 >

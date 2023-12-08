@@ -32,6 +32,7 @@ function App() {
         <React.Fragment>
           <Navbar
             {...{
+              isMobile,
               selectedSection,
               isMobile,
               setSelectedSection,

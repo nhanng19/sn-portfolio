@@ -18,7 +18,7 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 3px;
-    background-color: ${({ open }) => (open ? "#000000" : "#000000")};
+    background-color: ${({ open }) => (open ? "#000000" : "red")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -35,7 +35,7 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = ({ setSelectedSection }) => {
+const Burger = ({isMobile, setSelectedSection }) => {
     const [dark, setDark] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -43,12 +43,13 @@ const Burger = ({ setSelectedSection }) => {
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <div style={{ backgroundColor: dark ? "white" : "black" }} />
-        <div style={{  backgroundColor: dark ? "white" : "black" }} />
-        <div style={{  backgroundColor: dark ? "white" : "black" }} />
+        <div style={{ backgroundColor: dark ? "white" : "black" }} />
+        <div style={{ backgroundColor: dark ? "white" : "black" }} />
       </StyledBurger>
       <RightNav
+        isMobile={isMobile}
         dark={dark}
-        setDark={ setDark}
+        setDark={setDark}
         setSelectedSection={setSelectedSection}
         setOpen={setOpen}
         open={open}
