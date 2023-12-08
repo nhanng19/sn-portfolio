@@ -15,8 +15,8 @@ export default function Contact() {
       </span>
 
 
-      <hr />
-
+      <div className="line-break"></div>
+      <hr className="hide-desktop"/>
       <div className="personal-info-box">
 
           <a className="link" href="mailto:sandynguyen1276@gmail.com">
@@ -35,7 +35,6 @@ export default function Contact() {
             </li>
           </a>
 
- 
           <a className="link" href="https://t.me/sandyngu">
             <li className="tile">
               <img src="images/telegram-bird.png" alt="Image" className="bird-image"/>
@@ -51,7 +50,7 @@ export default function Contact() {
               <span className="message">Schedule a hangout</span>
             </li>
           </a>
-
+   
       </div>
     </div>
   )

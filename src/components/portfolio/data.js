@@ -23,6 +23,15 @@ const data = {
     description:
       "Spearheaded the design of the responsive MVP website + lite pages.",
     image: "double-jump-icon.PNG",
+    render: () => (
+      <span className="portfolio-description">
+        Spearheaded the design of
+        <br />
+        the responsive MVP
+        <br />
+        website + lite pages.
+      </span>
+    ),
   },
   BP: {
     key: "BP",
@@ -30,6 +39,15 @@ const data = {
     position: "FOUNDING DESIGNER",
     description: "Designed an MVP metaverse loan marketplace for land NFTs.  ",
     image: "blockpoly-icon.PNG",
+    render: () => (
+      <span className="portfolio-description">
+        Designed an MVP metaverse
+        <br />
+        loan marketplace for land
+        <br />
+        NFTs.
+      </span>
+    ),
   },
   MC: {
     key: "MC",
@@ -37,6 +55,15 @@ const data = {
     position: "PRODUCT DESIGNER",
     description: "Created a guided post-purchase download experience. ",
     image: "mcafee-icon.PNG",
+    render: () => (
+      <span className="portfolio-description">
+        Created a guided post-
+        <br />
+        purchase download
+        <br />
+        experience.
+      </span>
+    ),
   },
   GI: {
     key: "GI",
@@ -44,6 +71,13 @@ const data = {
     position: "UX DESIGNER",
     description: "Built a patient timeline feature + ASD task app.",
     image: "goinvo-icon.PNG",
+    render: () => (
+      <span className="portfolio-description">
+        Built a patient timeline
+        <br />
+        feature + ASD task app.
+      </span>
+    ),
   },
   AM: {
     key: "AM",
@@ -51,6 +85,15 @@ const data = {
     position: "UX/UI DESIGNER",
     description: "Designed the iOS and web MVP of the aviation marketplace.",
     image: "aeromates-icon.PNG",
+    render: () => (
+      <span className="portfolio-description">
+        Designed the iOS and web
+        <br />
+        MVP of the aviation
+        <br />
+        marketplace.
+      </span>
+    ),
   },
   HG: {
     key: "HG",
@@ -59,6 +102,15 @@ const data = {
     description:
       "Conceptualized brand identity through style guides and logo design.",
     image: "haus-of-golf-icon.PNG",
+    render: () => (
+      <span className="portfolio-description">
+        Conceptualized brand
+        <br />
+        identity through style
+        <br />
+        guides and logo design.
+      </span>
+    ),
   },
   VR: {
     key: "VR",
@@ -66,6 +118,15 @@ const data = {
     position: "UX DESIGNER",
     description: "Designed the user interface for an NFT marketplace.",
     image: "vrillar-icon.PNG",
+    render: () => (
+      <span className="portfolio-description">
+        Designed the user
+        <br />
+        interface for an NFT
+        <br />
+        marketplace.
+      </span>
+    ),
   },
 };
 

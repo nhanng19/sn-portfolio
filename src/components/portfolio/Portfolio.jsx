@@ -73,7 +73,7 @@ export default function Portfolio() {
         </a>
       </span>
       {active && (
-        <div className="experience-description">
+        <div className="experience-description hide-desktop">
           <span class="experience-company">
             {data[experience].company}
             <span className="experience-dash">

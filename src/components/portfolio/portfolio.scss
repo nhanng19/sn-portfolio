@@ -6,10 +6,12 @@
 
 .portfolio {
   scrollbar-width: none; // for firefox
+  position: relative;
   &::-webkit-scrollbar {
     display: none;
   }
 
+  
   .title-position {
     margin: 316px 0 0 97px;
   }
@@ -17,18 +19,26 @@
   .red-highlight-position {
     margin: 48px 0 0 97px;
   }
+    .quotation-position-2 {
+      position: relative;
+      padding: 50px 87px;
 
+      .black-button-sizing {
+        margin-left: 8px;
+        width: 110px;
+        height: 30px;
+      }
+    }
   .quotation-position-1 {
     margin: 4px 0 0 97px;
   }
 
   .portfolio-section {
     margin: 54px 0 0 87px;
-
     position: relative;
-     display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
     width: 40%;
 
@@ -36,8 +46,7 @@
       display: inline-block;
       border: solid 1px #ece7e5;
       position: relative;
-       min-height: 250px;
-
+      min-height: 250px;
 
       .box-wrapper {
         display: flex;
@@ -47,54 +56,52 @@
         width: 100%;
         z-index: 22;
         transition: 0.2s height linear;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         .image-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .image-hover {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 3rem;
+          .image-hover {
             display: none;
             z-index: 3;
-            position: absolute;
+          }
+        }
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.2s linear all;
+          z-index: 3;
+          border: 0px;
+          background-color: $mainColor;
+
+          .image-box {
+            .image {
+              display: none;
             }
-        }
-          &:hover {
-        transform: scale(1.1);
-        transition: .2s linear all;
-        z-index: 3;
-        border: 0px;
-        background-color: $mainColor;
-        
-        .image-box {
 
-
-          .image {
-            display: none;
+            .image-hover {
+              display: inline;
+            }
           }
 
-          .image-hover {
-            display: inline;
+          .portfolio-position {
+            left: 16px;
+            bottom: 74px;
+            color: #c2c2c2;
+          }
+
+          .portfolio-title {
+            left: 16px;
+            bottom: 98px;
+            color: white;
+          }
+
+          .portfolio-description {
+            display: block;
           }
         }
-
-        .portfolio-position {
-          left: 16px;
-          bottom: 74px;
-          color: #c2c2c2;
-        }
-
-        .portfolio-title {
-          left: 16px;
-          bottom: 98px;
-          color: white;
-        }
-
-        .portfolio-description {
-          display: block;
-        }
-      }    
-    }
+      }
 
       .portfolio-title {
         font-family: Poppins;
@@ -141,21 +148,8 @@
           font-style: italic;
         }
       }
-
-
     }
 
-    .quotation-position-2 {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-
-      .black-button-sizing {
-        margin-left: 8px;
-        width: 110px;
-        height: 30px;
-      }
-    }
   }
 }
 
@@ -165,7 +159,6 @@
   }
   .portfolio {
     padding: 112px 16px;
-    
   }
   .hide-desktop {
     display: block;
@@ -180,46 +173,55 @@
     position: relative !important;
     top: unset !important;
     left: unset !important;
-        min-height: 84px !important;
+    min-height: 84px !important;
   }
   .portfolio-section {
     margin: 0 !important;
     width: 100% !important;
-    margin: 24px 0!important
+    margin: 24px 0 !important;
   }
   .image {
     width: 70%;
   }
+
+  .box-wrapper {
+    justify-content: center !important;
+  }
+
+  .image-box {
+    margin: 0 !important;
+  }
+
   .experience-company {
     display: flex;
     align-items: center;
     color: #000;
-gap: 4px;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 800;
-line-height: 103.5%;
+    gap: 4px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 103.5%;
   }
   .experience-dash {
-    color: #C2C2C2;
+    color: #c2c2c2;
 
-font-family: Ubuntu Mono;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 200% */
-letter-spacing: 0.072px;
+    font-family: Ubuntu Mono;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 200% */
+    letter-spacing: 0.072px;
   }
   .experience-duty {
     color: #262626;
 
-font-family: Ubuntu Mono;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px; /* 150% */
-letter-spacing: 0.072px;
+    font-family: Ubuntu Mono;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    letter-spacing: 0.072px;
   }
 
   hr {

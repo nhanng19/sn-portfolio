@@ -14,12 +14,12 @@ const Ul = styled.ul`
     color: black;
   }
   li a {
-    transition: 0.2s all linear;
     text-decoration: none;
     color: black;
+    font-family: Ubuntu Mono;
   }
   li:hover a {
-    font-weight: bold;
+    text-decoration: underline;
   }
 
   li:hover div {
@@ -57,6 +57,16 @@ const Ul = styled.ul`
     display: none;
   }
 
+  .name {
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: #333;
+    text-decoration: none;
+    color: #fff;
+  }
+  .manifesto-name {
+    background-color: #b3b3b3;
+  }
   .logo {
     width: 72px;
     height: 32px;
@@ -73,7 +83,6 @@ const Ul = styled.ul`
     top: 32px;
     display: none;
   }
-
 
   @media (max-width: 600px) {
     flex-flow: column nowrap;
@@ -156,7 +165,7 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
               setDark(false);
               navigate("/garden");
             }}
-            to="/garden"
+            href={"#"}
             style={{ textDecoration: "none" }}
           >
             <span className="name">SANDY</span>
@@ -182,7 +191,8 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
                 setDark(false);
                 navigate("/garden");
               }}
-              to={"/garden"}
+              href={"#"}
+              className={` ${dark ? "name" : ""}`}
             >
               <span className="navigation">GARDEN</span>
             </a>
@@ -191,10 +201,11 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
             <a
               onClick={() => {
                 setOpen(false);
-                setDark(true);
                 navigate("/manifesto");
+                setDark(true);
               }}
-              to={"/manifesto"}
+              href={"#"}
+              className={` ${dark ? "name manifesto-name" : ""}`}
             >
               <span className="navigation">MANIFESTO</span>
             </a>
@@ -203,17 +214,22 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
             !item.isHard ? (
               <li key={item.title}>
                 <a
+                  className={` ${dark ? "name" : ""}`}
                   onClick={() => {
                     setOpen(false);
                   }}
-                  to={item.href}
+                  href={item.href}
                 >
                   <span className="navigation">{item.title}</span>
                 </a>
               </li>
             ) : (
               <li key={item.title}>
-                <a onClick={() => setOpen(false)} href={item.href}>
+                <a
+                  className={` ${dark ? "name" : ""}`}
+                  onClick={() => setOpen(false)}
+                  href={item.href}
+                >
                   <span className="navigation">{item.title}</span>
                 </a>
               </li>
