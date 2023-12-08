@@ -15,7 +15,7 @@ export default function Contact() {
       </span>
 
 
-      <div className="line-break"></div>
+      <div className="line-break hide-mobile"></div>
       <hr className="hide-desktop"/>
       <div className="personal-info-box">
 
