@@ -11,7 +11,6 @@ import "./garden.scss";
 export default function Garden({
   selectedSection,
   isMobile,
-  setSelectedSection,
   handleSectionChange,
 }) {
 

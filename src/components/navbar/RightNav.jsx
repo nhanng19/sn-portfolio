@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -126,6 +126,7 @@ const Ul = styled.ul`
 `;
 
 const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
+  const navigate = useNavigate();
 
   const navigation = [
     {
@@ -148,55 +149,67 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark }) => {
     <div style={{ background: dark ? "black" : "white" }} className="topbar">
       <div className="wrapper">
         <div className="left">
-          <Link to="/garden" style={{ textDecoration: "none" }}>
-            <span className="name">SANDY</span>
-          </Link>
-        </div>
-        <Ul open={open}>
-          <Link
+          <a
             onClick={() => {
               setOpen(false);
               setSelectedSection("intro");
               setDark(false);
+              navigate("/garden");
+            }}
+            to="/garden"
+            style={{ textDecoration: "none" }}
+          >
+            <span className="name">SANDY</span>
+          </a>
+        </div>
+        <Ul open={open}>
+          <a
+            onClick={() => {
+              setOpen(false);
+              setSelectedSection("intro");
+              setDark(false);
+              navigate("/garden");
             }}
             to="/garden"
           >
             <span className="logo">SANDY</span>
-          </Link>
+          </a>
           <li key={"garden"}>
-            <Link
+            <a
               onClick={() => {
                 setOpen(false);
                 setSelectedSection("intro");
                 setDark(false);
+                navigate("/garden");
               }}
               to={"/garden"}
             >
               <span className="navigation">GARDEN</span>
-            </Link>
+            </a>
           </li>
           <li key={"manifesto"}>
-            <Link
+            <a
               onClick={() => {
                 setOpen(false);
                 setDark(true);
+                navigate("/manifesto");
               }}
               to={"/manifesto"}
             >
               <span className="navigation">MANIFESTO</span>
-            </Link>
+            </a>
           </li>
           {navigation.map((item) =>
             !item.isHard ? (
               <li key={item.title}>
-                <Link
+                <a
                   onClick={() => {
                     setOpen(false);
                   }}
                   to={item.href}
                 >
                   <span className="navigation">{item.title}</span>
-                </Link>
+                </a>
               </li>
             ) : (
               <li key={item.title}>

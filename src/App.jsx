@@ -30,10 +30,29 @@ function App() {
     <>
       <BrowserRouter>
         <React.Fragment>
-          <Navbar />
+          <Navbar
+            {...{
+              selectedSection,
+              isMobile,
+              setSelectedSection,
+              handleSectionChange,
+            }}
+          />
         </React.Fragment>
         <Routes>
-          <Route path="/garden" element={<Garden {...{selectedSection, isMobile, setSelectedSection, handleSectionChange}} />} />
+          <Route
+            path="/garden"
+            element={
+              <Garden
+                {...{
+                  selectedSection,
+                  isMobile,
+                  setSelectedSection,
+                  handleSectionChange,
+                }}
+              />
+            }
+          />
           <Route path="manifesto" element={<Manifesto />} />
         </Routes>
       </BrowserRouter>
