@@ -13,11 +13,8 @@ function App() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); 
     };
-
-    handleResize(); // Initial check
-
+    handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -41,6 +38,20 @@ function App() {
           />
         </React.Fragment>
         <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <Garden
+                {...{
+                  selectedSection,
+                  isMobile,
+                  setSelectedSection,
+                  handleSectionChange,
+                }}
+              />
+            }
+          />{" "}
           <Route
             path="/garden"
             element={

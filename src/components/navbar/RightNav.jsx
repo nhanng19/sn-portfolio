@@ -20,7 +20,7 @@ const Ul = styled.ul`
   }
 
   .text-decoration-underline {
-    text-decoration: underline
+    text-decoration: underline;
   }
 
   li a span {
@@ -67,7 +67,7 @@ const Ul = styled.ul`
   }
 
   .name:hover {
-    text-decoration: none !important
+    text-decoration: none !important;
   }
 
   .manifesto-name {
@@ -90,7 +90,7 @@ const Ul = styled.ul`
     display: none;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     flex-flow: column nowrap;
     background: white;
     position: fixed;
@@ -110,6 +110,10 @@ const Ul = styled.ul`
       padding: 1.3rem 0rem;
     }
 
+    .text-decoration-underline {
+      text-decoration: none !important;
+    }
+
     li a span {
       color: #000;
       font-family: Poppins;
@@ -117,6 +121,9 @@ const Ul = styled.ul`
       font-style: normal;
       font-weight: 800;
       line-height: 103.5%;
+    }
+    li:hover a {
+      text-decoration: none!important;
     }
 
     li:last-child {
