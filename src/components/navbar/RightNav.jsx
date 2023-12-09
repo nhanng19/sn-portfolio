@@ -10,21 +10,32 @@ const Ul = styled.ul`
   li {
     position: relative;
     padding: 5px 10px;
-    cursor: none;
     color: black;
   }
   li a {
     text-decoration: none;
     color: black;
     font-family: Ubuntu Mono;
+    padding: 6px 8px;
   }
+
+  .text-decoration-underline {
+    text-decoration: underline
+  }
+
+  li a span {
+    font-family: Ubuntu Mono;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.8px; /* 140% */
+    letter-spacing: 1.2px;
+  }
+
   li:hover a {
     text-decoration: underline;
   }
 
-  li:hover div {
-    display: block;
-  }
   div {
     display: none;
     position: absolute;
@@ -44,26 +55,21 @@ const Ul = styled.ul`
     font-size: 0.75rem;
   }
 
-  div a:hover {
-    background-color: rgb(227, 229, 196);
-    color: black;
-  }
-
-  div:hover div {
-    display: block;
-  }
-
   p {
     display: none;
   }
 
   .name {
-    padding: 6px 8px;
     border-radius: 4px;
     background-color: #333;
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
   }
+
+  .name:hover {
+    text-decoration: none !important
+  }
+
   .manifesto-name {
     background-color: #b3b3b3;
   }
@@ -98,16 +104,19 @@ const Ul = styled.ul`
     align-items: start;
     gap: 1rem;
     li {
+      width: 100%;
+      text-align: left;
+      border-bottom: 1px solid #ece7e5;
+      padding: 1.3rem 0rem;
+    }
+
+    li a span {
       color: #000;
       font-family: Poppins;
       font-size: 24px;
       font-style: normal;
       font-weight: 800;
       line-height: 103.5%;
-      width: 100%;
-      text-align: left;
-      border-bottom: 1px solid #ece7e5;
-      padding: 1.3rem 0rem;
     }
 
     li:last-child {
@@ -118,7 +127,7 @@ const Ul = styled.ul`
     }
 
     li a:hover {
-      text-decoration: none
+      text-decoration: none;
     }
     p {
       justify-self: flex-end;
@@ -198,7 +207,9 @@ const RightNav = ({ open, setOpen, setSelectedSection, dark, setDark, isMobile }
                 navigate("/garden");
               }}
               href={"#"}
-              className={` ${dark && !isMobile ? "name" : ""}`}
+              className={` ${
+                dark && !isMobile ? "name" : "text-decoration-underline"
+              }`}
             >
               <span className="navigation">GARDEN</span>
             </a>

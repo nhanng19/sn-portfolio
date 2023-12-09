@@ -18,7 +18,7 @@ const data = {
   },
   DJ: {
     key: "DJ",
-    company: "Double Jump",
+    company: "DOULBE JUMP",
     position: "PRODUCT DESIGNER",
     description:
       "Spearheaded the design of the responsive MVP website + lite pages.",

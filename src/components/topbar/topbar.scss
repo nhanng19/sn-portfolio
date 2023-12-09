@@ -8,7 +8,7 @@
     z-index: 9;
     background: white;
     .wrapper{
-        padding: 32px 20px;
+        padding: 32px 64px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -85,6 +85,14 @@
             > *{
                 padding-left: 16px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topbar {
+        .wrapper {
+            padding: 32px 20px;
         }
     }
 }

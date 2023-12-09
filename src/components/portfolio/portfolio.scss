@@ -11,43 +11,42 @@
     display: none;
   }
 
-  
   .title-position {
-    margin: 316px 0 0 97px;
+    margin: 316px 0 0 173px;
   }
 
   .red-highlight-position {
-    margin: 48px 0 0 97px;
+    margin: 48px 0 0 173px;
   }
-    .quotation-position-2 {
-      position: relative;
-      padding: 50px 87px;
+  .quotation-position-2 {
+    position: relative;
+    padding: 50px 173px;
 
-      .black-button-sizing {
-        margin-left: 8px;
-        width: 110px;
-        height: 30px;
-      }
+    .black-button-sizing {
+      margin-left: 8px;
+      width: 110px;
+      height: 30px;
     }
+  }
   .quotation-position-1 {
-    margin: 4px 0 0 97px;
+    margin: 4px 0 0 173px;
   }
 
   .portfolio-section {
-    margin: 54px 0 0 87px;
+    margin: 54px 0 0 173px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-    width: 680px;
+    width: 660px;
 
     .box {
-      display: inline-block;
+      display: flex;
       border: solid 1px #ece7e5;
       position: relative;
-      min-height: 250px;
-
+      min-height: 180px;
+      justify-content: center;
       .box-wrapper {
         display: flex;
         flex-direction: column;
@@ -55,26 +54,25 @@
         height: 100%;
         width: 100%;
         z-index: 22;
-        transition: 0.2s height linear;
         justify-content: flex-start;
         align-items: center;
         .image-box {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 3rem;
+          margin-top: 2rem;
           .image-hover {
             display: none;
-            z-index: 3;
+            z-index: 100;
           }
         }
         &:hover {
-          transform: scale(1.1);
-          transition: 0.2s linear all;
-          z-index: 3;
+          height: 240px;
+          width: 180px;
+          z-index: 100;
           border: 0px;
           background-color: $mainColor;
-
+          margin: 0 auto;
           .image-box {
             .image {
               display: none;
@@ -149,7 +147,6 @@
         }
       }
     }
-
   }
 }
 
@@ -186,6 +183,15 @@
 
   .box-wrapper {
     justify-content: center !important;
+    &:hover {
+      height: 100% !important;
+      width: 100% !important;
+      transform: scale(1.1) !important;
+      transition: 0.2s linear all;
+      z-index: 100;
+      border: 0px;
+      background-color: $mainColor;
+    }
   }
 
   .image-box {
